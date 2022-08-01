@@ -57,6 +57,9 @@ body {
 .pa6 {
   padding: 6px;
 }
+.pab0{
+  padding-bottom: 0;
+}
 .xuanfu {
   box-shadow: 4px 3.7px 8.1px -20px rgba(0, 0, 0, 0.045),
     11.1px 10.1px 22.4px -20px rgba(0, 0, 0, 0.065),
