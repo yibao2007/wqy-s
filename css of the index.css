@@ -54,6 +54,9 @@ body {
 .mgb16 {
   margin-bottom: 16px;
 }
+.pa6 {
+  padding: 6px;
+}
 .xuanfu {
   box-shadow: 4px 3.7px 8.1px -20px rgba(0, 0, 0, 0.045),
     11.1px 10.1px 22.4px -20px rgba(0, 0, 0, 0.065),
@@ -63,4 +66,20 @@ body {
 .duiqi {
   justify-content: center;
   align-items: center;
+}
+a:link,
+a:visited {
+  background-color: rgb(240, 240, 240, 0.3);
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  background-color: green;
+  color: white;
 }
