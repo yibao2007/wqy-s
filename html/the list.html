@@ -1,97 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        background-color: rgba(98, 158, 99, 0.7);
-      }
-      * {
-        border: 1px solid black;
-      }
-      .center {
-        justify-content: center;
-        align-items: center;
-      }
-      .center1 {
-        text-align: center;
-        vertical-align: middle;
-      }
-      .flex {
-        display: flex;
-      }
-      .felx1 {
-        flex: 1;
-      }
-      .column {
-        flex-direction: column;
-      }
-      .row {
-        flex-direction: row;
-      }
-      .wqy {
-        background-color: rgba(0, 140, 255, 0.5);
-      }
-      .mg50 {
-        margin: 50px;
-      }
-      .mgr50 {
-        margin-right: 50px;
-      }
-      .mgl50 {
-        margin-left: 50px;
-      }
-      .mgt50 {
-        margin-top: 50px;
-      }
-      .mga{
-        margin-top: auto;
-      }
-      table {
-        border-collapse: collapse;
-        width: 80%;
-      }
 
-      th,
-      td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid rgb(0, 63, 113);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-      tr:hover {
-        background-color: #f5f5f5;
-      }
-    </style>
-  </head>
-  <body class="flex flex1 column">
-    <!-- ���� -->
-    <div
-      style="
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: rgba(98, 158, 99, 0.7);
+    }
+    .biankuang{
+      border:2px solid rgb(60, 60, 60);
+    }
+    .center {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .center1 {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .felx1 {
+      flex: 1;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .row {
+      flex-direction: row;
+    }
+
+    .wqy {
+      background-color: rgba(0, 140, 255, 0.5);
+    }
+
+    .mg50 {
+      margin: 50px;
+    }
+
+    .mgr50 {
+      margin-right: 50px;
+    }
+
+    .mgl50 {
+      margin-left: 50px;
+    }
+
+    .mgt50 {
+      margin-top: 50px;
+    }
+
+    .mgt20 {
+      margin-top: 20px;
+    }
+
+    .mga {
+      margin-top: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid rgb(0, 63, 113);
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    a:link,
+    a:visited {
+      background-color: rgb(240, 240, 240, 0.3);
+      color: black;
+      border: 2px solid green;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    a:hover,
+    a:active {
+      background-color: green;
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body class="flex flex1 column">
+  <!-- 顶部 -->
+  <div style="
         height: 60px;
         z-index: 1;
         text-align: center;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-      "
-      class="flex wqy biankuang"
-    >
-      <h1 style="color: rgb(0, 63, 113)">23��ʳ��</h1>
+      " class="flex wqy biankuang">
+    <div class="flex flex1"></div>
+    <h1 style="color: rgb(0, 63, 113)">23零食铺</h1>
+    <div style="justify-self: flex-end; margin-right: 10px" class="flex flex1">
+      <a style="
+            font-size: 18px;
+            border: 2px solid rgb(0, 63, 113);
+            padding: 2px;
+          " href="./index.html">返回</a>
     </div>
-    <!-- main -->
-    <div style="flex: 1; overflow: auto" class="flex column mgt50">
-      <span style="height: 60px" class="flex row flex1">
-        <span style="flex: 2" class="center1 mga">����</span>
-        <span style="flex: 2">3</span>
-        <span style="flex: 2"></span>
-        <span style="flex: 2"></span>
-        <span style="flex: 1"></span>
-      </span>
-    </div>
-  </body>
+  </div>
+  <!-- main -->
+  <table style="margin-top: 50px;">
+    <tr>
+      <th>物品</th>
+      <th>金额</th>
+      <th>数量</th>
+      <th>互动</th>
+      <th>操作</th>
+    </tr>
+
+    <tr id="delete1" style="display: 1">
+      <td>辣条</td>
+      <td>3元</td>
+      <td>1</td>
+      <td>0</td>
+      <td><button onclick="document.getElementById('delete1').style.display='none'">删除</button></td>
+    </tr>
+    <tr id="delete2" style="display: 1">
+      <td>Steve</td>
+      <td>Jobs</td>
+      <td>$150</td>
+      <td>0</td>
+      <td><button onclick="document.getElementById('delete2').style.display='none'">删除</button></td>
+    </tr>
+    <tr id="delete3" style="display: 1">
+      <td>Elon</td>
+      <td>Musk</td>
+      <td>$300</td>
+      <td>0</td>
+      <td><button onclick="document.getElementById('delete3').style.display='none'">删除</button></td>
+    </tr>
+    <tr id="delete4" style="display: 1">
+      <td>Mark</td>
+      <td>0</td>
+      <td>$250</td>
+      <td>0</td>
+      <td><button onclick="document.getElementById('delete4').style.display='none'">删除</button></td>
+    </tr>
+  </table>
+
+  </div>
+</body>
+
+
 </html>
