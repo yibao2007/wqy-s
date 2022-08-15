@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: rgba(98, 158, 99, 0.7);
+}
+.biankuang {
+  border: 2px solid rgb(60, 60, 60);
+}
+.biankuang1 {
+  border: 1px solid rgb(60, 60, 60);
+}
+.flex {
+  display: flex;
+}
+.felx1 {
+  flex: 1;
+}
+.column {
+  flex-direction: column;
+}
+.baise {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+p{
+  color: rgb(60, 60, 60);
+}
+.row {
+  flex-direction: row;
+}
+.wqy {
+  background-color: rgba(0, 140, 255, 0.5);
+}
+.baise {
+  background-color: white;
+}
+.mg8 {
+  margin: 16px;
+}
+.mgr8 {
+  margin-right: 8px;
+}
+.mgl8 {
+  margin-left: 8px;
+}
+.mgt16 {
+  margin-top: 16px;
+}
+.mgt50 {
+  margin-top: 50px;
+}
+.mgt25 {
+  margin-top: 25px;
+}
+.mgl16 {
+  margin-left: 16px;
+}
+.mgb16 {
+  margin-bottom: 16px;
+}
+.pa6 {
+  padding: 6px;
+}
+.pab0{
+  padding-bottom: 0;
+}
+.xuanfu {
+  box-shadow: 4px 3.7px 8.1px -20px rgba(0, 0, 0, 0.045),
+    11.1px 10.1px 22.4px -20px rgba(0, 0, 0, 0.065),
+    26.8px 24.4px 54px -20px rgba(0, 0, 0, 0.085),
+    89px 81px 179px -20px rgba(0, 0, 0, 0.13);
+}
+.duiqi {
+  justify-content: center;
+  align-items: center;
+}
+a:link,
+a:visited {
+  background-color: rgb(240, 240, 240, 0.3);
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  background-color: green;
+  color: white;
+}
