@@ -5,202 +5,154 @@ localStorage.setItem("delete4", "none");
 
 //汽水的代码快
 //增加
+sessionStorage.setItem("dianji1", "1");
 sessionStorage.setItem("latiao", "3");
-var latiao = Number(sessionStorage.getItem("latiao"));
 function increase1() {
-  if (typeof Storage !== "undefined") {
-    if (sessionStorage.clickcount1) {
-      sessionStorage.clickcount1 = Number(sessionStorage.clickcount1) + 1;
-    } else {
-      sessionStorage.clickcount1 = 1;
-    }
-    document.getElementById("latiao").innerHTML = Number(
-      sessionStorage.clickcount1
-    );
+  if (sessionStorage.getItem("dianji1") >= 1) {
+    sessionStorage.dianji1 = Number(sessionStorage.getItem("dianji1")) + 1;
+    document.getElementById("latiao").innerHTML = sessionStorage.dianji1;
     document.getElementById("n_latiao").innerHTML =
-      sessionStorage.clickcount1 * latiao + "元";
-  } else {
-    tishi();
+      sessionStorage.dianji1 * 3 + "元";
   }
 }
 //减少
 function reduce1() {
-  if (typeof Storage !== "undefined") {
-    if (sessionStorage.clickcount1) {
-      sessionStorage.clickcount1 = Number(sessionStorage.clickcount1) - 1;
-    } else {
-      sessionStorage.clickcount1 = 1;
-    }
-    document.getElementById("latiao").innerHTML = Number(
-      sessionStorage.clickcount1
-    );
+  if (sessionStorage.getItem("dianji1") >= 1) {
+    sessionStorage.dianji1 = Number(sessionStorage.getItem("dianji1")) - 1;
+    document.getElementById("latiao").innerHTML = sessionStorage.dianji1;
     document.getElementById("n_latiao").innerHTML =
-      sessionStorage.clickcount1 * latiao + "元";
-
-    if (sessionStorage.clickcount1 <= 1) {
-      delete1();
-    }
-  } else {
-    tishi();
+      sessionStorage.dianji1 * 3 + "元";
+  }
+  if (sessionStorage.getItem("dianji1") == 0) {
+    delete1();
   }
 }
-//提示的代码快
-function tishi() {
-  alert("抱歉，您的浏览器不支持 Web Stoeage");
-}
+//删除
 function delete1() {
   document.getElementById("delete1").style.display =
     localStorage.getItem("delete1");
-  sessionStorage.removeItem("clickcount1");
+  document.getElementById("n_latiao").innerHTML = "3元";
+  document.getElementById("latiao").innerHTML = "1";
+  sessionStorage.dianji1 = 1;
+}
+//添加
+function tianjia1() {
+  sessionStorage.dianji1 = 1;
+  document.getElementById("delete1").style.display =
+    localStorage.getItem("none");
 }
 //汽水的代码快
 //增加
-sessionStorage.setItem("shupian", "5");
-var shupian = Number(sessionStorage.getItem("shupian"));
+sessionStorage.setItem("dianji2", "1");
+sessionStorage.setItem("shupian", "3");
 function increase2() {
-  if (typeof Storage !== "undefined") {
-    if (sessionStorage.clickcount2) {
-      sessionStorage.clickcount2 = Number(sessionStorage.clickcount2) + 1;
-    } else {
-      sessionStorage.clickcount2 = 1;
-    }
-    document.getElementById("shupian").innerHTML = Number(
-      sessionStorage.clickcount2
-    );
+  if (sessionStorage.getItem("dianji2") >= 1) {
+    sessionStorage.dianji2 = Number(sessionStorage.getItem("dianji2")) + 1;
+    document.getElementById("shupian").innerHTML = sessionStorage.dianji2;
     document.getElementById("n_shupian").innerHTML =
-      sessionStorage.clickcount2 * shupian + "元";
-  } else {
-    tishi();
+      sessionStorage.dianji2 * 5 + "元";
   }
 }
 //减少
 function reduce2() {
-  if (typeof Storage !== "undefined") {
-    if (sessionStorage.clickcount2) {
-      sessionStorage.clickcount2 = Number(sessionStorage.clickcount2) - 1;
-    } else {
-      sessionStorage.clickcount2 = 1;
-    }
-    document.getElementById("shupian").innerHTML = Number(
-      sessionStorage.clickcount2
-    );
+  if (sessionStorage.getItem("dianji2") >= 1) {
+    sessionStorage.dianji2 = Number(sessionStorage.getItem("dianji2")) - 1;
+    document.getElementById("shupian").innerHTML = sessionStorage.dianji2;
     document.getElementById("n_shupian").innerHTML =
-      sessionStorage.clickcount2 * shupian + "元";
-
-    if (sessionStorage.clickcount2 <= 1) {
-      delete2();
-    }
-  } else {
-    tishi();
+      sessionStorage.dianji2 * 5 + "元";
+  }
+  if (sessionStorage.getItem("dianji2") == 0) {
+    delete2();
   }
 }
-//提示的代码快
-function tishi() {
-  alert("抱歉，您的浏览器不支持 Web Stoeage");
-}
+//删除
 function delete2() {
   document.getElementById("delete2").style.display =
     localStorage.getItem("delete2");
-  sessionStorage.removeItem("clickcount1");
+  document.getElementById("n_shupian").innerHTML = "5元";
+  document.getElementById("shupian").innerHTML = "1";
+  sessionStorage.dianji2 = 1;
+}
+//添加
+function tianjia2() {
+  sessionStorage.dianji2 = 1;
+  document.getElementById("delete2").style.display =
+    localStorage.getItem("none");
 }
 //汽水的代码快
 //增加
-sessionStorage.setItem("qishui", "2");
-var qishui = Number(sessionStorage.getItem("qishui"));
+sessionStorage.setItem("dianji3", "1");
+sessionStorage.setItem("qishi", "2");
 function increase3() {
-  if (typeof Storage !== "undefined") {
-    if (sessionStorage.clickcount3) {
-      sessionStorage.clickcount3 = Number(sessionStorage.clickcount3) + 1;
-    } else {
-      sessionStorage.clickcount3 = 1;
-    }
-    document.getElementById("qishui").innerHTML = Number(
-      sessionStorage.clickcount3
-    );
+  if (sessionStorage.getItem("dianji3") >= 1) {
+    sessionStorage.dianji3 = Number(sessionStorage.getItem("dianji3")) + 1;
+    document.getElementById("qishui").innerHTML = sessionStorage.dianji3;
     document.getElementById("n_qishui").innerHTML =
-      sessionStorage.clickcount3 * qishui + "元";
-  } else {
-    tishi();
+      sessionStorage.dianji3 * 2 + "元";
   }
 }
 //减少
 function reduce3() {
-  if (typeof Storage !== "undefined") {
-    if (sessionStorage.clickcount3) {
-      sessionStorage.clickcount3 = Number(sessionStorage.clickcount3) - 1;
-    } else {
-      sessionStorage.clickcount3 = 1;
-    }
-    document.getElementById("qishui").innerHTML = Number(
-      sessionStorage.clickcount3
-    );
+  if (sessionStorage.getItem("dianji3") >= 1) {
+    sessionStorage.dianji3 = Number(sessionStorage.getItem("dianji3")) - 1;
+    document.getElementById("qishui").innerHTML = sessionStorage.dianji3;
     document.getElementById("n_qishui").innerHTML =
-      sessionStorage.clickcount3 * qishui + "元";
-
-    if (sessionStorage.clickcount3 <= 1) {
-      delete3();
-    }
-  } else {
-    tishi();
+      sessionStorage.dianji3 * 2 + "元";
+  }
+  if (sessionStorage.getItem("dianji3") == 0) {
+    delete3();
   }
 }
-//提示的代码快
-function tishi() {
-  alert("抱歉，您的浏览器不支持 Web Stoeage");
-}
+//删除
 function delete3() {
   document.getElementById("delete3").style.display =
     localStorage.getItem("delete3");
-  sessionStorage.removeItem("clickcount3");
+  document.getElementById("n_qishui").innerHTML = "2元";
+  document.getElementById("qishui").innerHTML = "1";
+  sessionStorage.dianji3 = 1;
+}
+//添加
+function tianjia3() {
+  sessionStorage.dianji3 = 1;
+  document.getElementById("delete3").style.display =
+    localStorage.getItem("none");
 }
 //汽水的代码快
 //增加
+sessionStorage.setItem("dianji4", "1");
 sessionStorage.setItem("shili", "1");
-var shili = Number(sessionStorage.getItem("shili"));
 function increase4() {
-  if (typeof Storage !== "undefined") {
-    if (sessionStorage.clickcount4) {
-      sessionStorage.clickcount4 = Number(sessionStorage.clickcount4) + 1;
-    } else {
-      sessionStorage.clickcount4 = 1;
-    }
-    document.getElementById("shili").innerHTML = Number(
-      sessionStorage.clickcount4
-    );
+  if (sessionStorage.getItem("dianji4") >= 1) {
+    sessionStorage.dianji4 = Number(sessionStorage.getItem("dianji4")) + 1;
+    document.getElementById("shili").innerHTML = sessionStorage.dianji4;
     document.getElementById("n_shili").innerHTML =
-      sessionStorage.clickcount4 * shili + "元";
-  } else {
-    tishi();
+      sessionStorage.dianji4 * 1 + "元";
   }
 }
 //减少
 function reduce4() {
-  if (typeof Storage !== "undefined") {
-    if (sessionStorage.clickcount4) {
-      sessionStorage.clickcount4 = Number(sessionStorage.clickcount4) - 1;
-    } else {
-      sessionStorage.clickcount4 = 1;
-    }
-    document.getElementById("shili").innerHTML = Number(
-      sessionStorage.clickcount4
-    );
+  if (sessionStorage.getItem("dianji4") >= 1) {
+    sessionStorage.dianji4 = Number(sessionStorage.getItem("dianji4")) - 1;
+    document.getElementById("shili").innerHTML = sessionStorage.dianji4;
     document.getElementById("n_shili").innerHTML =
-      sessionStorage.clickcount4 * shili + "元";
-
-    if (sessionStorage.clickcount4 <= 1) {
-      delete4();
-    }
-  } else {
-    tishi();
+      sessionStorage.dianji4 * 1 + "元";
+  }
+  if (sessionStorage.getItem("dianji4") == 0) {
+    delete4();
   }
 }
-//提示的代码快
-function tishi() {
-  alert("抱歉，您的浏览器不支持 Web Stoeage");
-}
+//删除
 function delete4() {
   document.getElementById("delete4").style.display =
     localStorage.getItem("delete4");
-  sessionStorage.removeItem("clickcount4");
+  document.getElementById("n_shili").innerHTML = "1元";
+  document.getElementById("shili").innerHTML = "1";
+  sessionStorage.dianji4 = 1;
+}
+//添加
+function tianjia4() {
+  sessionStorage.dianji4 = 1;
+  document.getElementById("delete4").style.display =
+    localStorage.getItem("none");
 }
 //一个小担心： 一个物品的交互就用了40行代码，后续的优化工作量依然很大
