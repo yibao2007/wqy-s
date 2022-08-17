@@ -49,8 +49,8 @@
 
       <tr id="delete1" style="display: 1">
         <td>辣条</td>
-        <td id="n_latiao">3元</td>
-        <td id="latiao">1</td>
+        <td id="n_latiao"></td>
+        <td id="latiao"></td>
         <td>
           <button type="button" onclick="increase1()">加</button>
           <button type="button" onclick="reduce1()">减</button>
@@ -61,8 +61,8 @@
       </tr>
       <tr id="delete2" style="display: 1">
         <td>薯片</td>
-        <td id="n_shupian">5元</td>
-        <td id="shupian">1</td>
+        <td id="n_shupian"></td>
+        <td id="shupian"></td>
         <td>
           <button type="button" onclick="increase2()">加</button>
           <button type="button" onclick="reduce2()">减</button>
@@ -73,8 +73,8 @@
       </tr>
       <tr id="delete3" style="display: 1">
         <td>汽水</td>
-        <td id="n_qishui">2元</td>
-        <td id="qishui">1</td>
+        <td id="n_qishui"></td>
+        <td id="qishui"></td>
         <td>
           <button type="button" onclick="increase3()">加</button>
           <button type="button" onclick="reduce3()">减</button>
@@ -85,8 +85,8 @@
       </tr>
       <tr id="delete4" style="display: 1">
         <td>示例</td>
-        <td id="n_shili">1元</td>
-        <td id="shili">1</td>
+        <td id="n_shili"></td>
+        <td id="shili"></td>
         <td>
           <button type="button" onclick="increase4()">加</button>
           <button type="button" onclick="reduce4()">减</button>
@@ -103,5 +103,23 @@
       <button type="button" onclick="tianjia4()">加入购物车</button>
     </div>
     <script src="../js/list.js"></script>
+    <script>
+      //实时显示辣条数量
+      var a = localStorage.dianji1;
+      document.getElementById("latiao").innerHTML = a;
+      document.getElementById("n_latiao").innerHTML = a * 3 + "元";
+      //实时显示薯片数量
+      var b = localStorage.dianji2;
+      document.getElementById("shupian").innerHTML = b;
+      document.getElementById("n_shupian").innerHTML = b * 5 + "元";
+      //实时显示汽水数量
+      var c = localStorage.dianji3;
+      document.getElementById("qishui").innerHTML = c;
+      document.getElementById("n_qishui").innerHTML = c * 2 + "元";
+      //实时显示示例数量
+      var d = localStorage.dianji4;
+      document.getElementById("shili").innerHTML = d;
+      document.getElementById("n_shili").innerHTML = d * 2 + "元";
+    </script>
   </body>
 </html>
