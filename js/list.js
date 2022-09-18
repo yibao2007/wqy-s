@@ -1,7 +1,8 @@
-localStorage.setItem("delete1", "none");
-localStorage.setItem("delete2", "none");
-localStorage.setItem("delete3", "none");
-localStorage.setItem("delete4", "none");
+window.localStorage.delete1 = "none";
+window.localStorage.delete2 = "none";
+window.localStorage.delete3 = "none";
+window.localStorage.delete4 = "none";
+var xianshi1 = document.getElementById("delete1");
 
 //汽水的代码快
 //增加
@@ -36,8 +37,9 @@ function delete1() {
 //添加
 function tianjia1() {
   localStorage.dianji1 = 1;
-  document.getElementById("delete1").style.display =
-    localStorage.getItem("none");
+  document.getElementById("delete1").style.display = "inline-flexbox";
+  localStorage.delete1 = "table-row";
+  xianshi1.style.display = "table-row";
 }
 //汽水的代码快
 //增加
